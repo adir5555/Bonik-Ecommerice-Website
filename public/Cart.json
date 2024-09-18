@@ -1,0 +1,81 @@
+[
+  {
+      "image": "../src/assets/SlideCard/slide-1.png",
+      "brand": "WOXEN",
+      "title": "Women Kurta and Pant Set Art Silk",
+      "color": "",
+      "selling_price": "₹699",
+      "price": "₹2,899",
+      "disscount": "75% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/SlideCard/slide-2.png",
+      "brand": "LIBAS",
+      "title": "Women Kurta and Palazzo Set Cotton Blend",
+      "color": "",
+      "selling_price": "₹1,082",
+      "price": "₹2,799",
+      "disscount": "61% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/SlideCard/slide-3.png",
+      "brand": "Samah",
+      "title": "Women Kurta, Pant And Dupatta Set Silk Blend, Cotton Bl...",
+      "color": "",
+      "selling_price": "₹702",
+      "price": "₹3,997",
+      "disscount": "82% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/SlideCard/slide-4.png",
+      "brand": "Klosia",
+      "title": "Women Kurta, Pant And Dupatta Set Viscose Rayon",
+      "color": "",
+      "selling_price": "₹664",
+      "price": "₹2,999",
+      "disscount": "77% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/watches/boAt Storm 1.webp",
+      "brand": "shoecom",
+      "title": "Women Kurta and Palazzo Set Viscose Rayon",
+      "color": "",
+      "selling_price": "₹433",
+      "price": "₹2,995",
+      "disscount": "85% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/watches/boAt Watch Storm - Captain America Marvel Edition.webp",
+      "brand": "PRISCA",
+      "title": "Women Kurta and Pant Set Viscose Rayon",
+      
+      "color": "",
+      "selling_price": "₹779",
+      "price": "₹1,299",
+      "disscount": "40% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  },
+  {
+      "image": "../src/assets/watches/boAt Wave Beat 1.webp",
+      "brand": "The Style Story",
+      "title": "Women Kurta, Pyjama & Dupatta Set Viscose Rayon",
+      "color": "",
+      "selling_price": "₹748",
+      "price": "₹1,999",
+      "disscount": "62% off",
+      "size": "",
+      "loremm": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, sit?"
+  }
+ 
+]
