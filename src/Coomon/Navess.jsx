@@ -9,7 +9,9 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import "./Fooerss/Header.css";
 
-const Navess = () => {
+
+
+const Navess = ({ handleInputChange, query }) => {
   const [visible, setVisiable] = useState(false);
   window.addEventListener("scroll", function () {
     const search = document.querySelector(".search");
@@ -29,9 +31,12 @@ const Navess = () => {
       <div className="">
         <input
           type="text"
-          className=" text-black"
+          className=" text-black search-input"
+          onChange={handleInputChange}
+          value={query}
           placeholder="Search for products ..."
         />
+        
       </div>
     </>
   );
@@ -70,20 +75,16 @@ const Navess = () => {
   const navOption = (
     <>
       <NavLink to="/" className="flex flex-col items-center gap-1">
-        <p>Home</p>
-        <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        <p className="hover:text-cyan-200">Home</p>
       </NavLink>
-      <NavLink to="/collection" className="flex flex-col items-center gap-1">
-        <p>Collection</p>
-        <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+      <NavLink to="/womendress" className="flex flex-col items-center gap-1">
+        <p className="hover:text-cyan-200">womendress</p>
       </NavLink>
-      <NavLink to="/about" className="flex flex-col items-center gap-1">
-        <p>About</p>
-        <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+      <NavLink to="/womentop" className="flex flex-col items-center gap-1">
+        <p className="hover:text-cyan-200">womentop</p>
       </NavLink>
-      <NavLink to="/contact" className="flex flex-col items-center gap-1">
-        <p>Contact</p>
-        <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+      <NavLink to="/menshirt" className="flex flex-col items-center gap-1">
+        <p className="hover:text-cyan-200">menshirt</p>
       </NavLink>
     </>
   );
@@ -151,7 +152,7 @@ const Navess = () => {
             </label>
           </div>
           <div className="navbar-end ">
-            <div className=" flex items-center gap-3  ">
+            <div className=" flex items-center gap-5  ">
               <div className="items-center gap-4 sm:flex hidden ">
                 <div className="relative ">
                   <p className="absolute right-[-10px] w-4 text-center leading-4 bg-sky-500 text-white aspect-square rounded-full text-[10px]">
@@ -159,7 +160,7 @@ const Navess = () => {
                   </p>
                   <GiSelfLove className="text-3xl text-white cursor-pointer"></GiSelfLove>
                 </div>
-                <div className=" text-xs ">
+                <div className=" text-xs hidden lg:flex">
                   <h3 className="text-white font-bold">
                     <small className="text-gray-300 ">Favorite</small> <br /> My
                     Wishlist
@@ -174,7 +175,7 @@ const Navess = () => {
                   </p>
                   <FiShoppingCart className="text-3xl text-white"></FiShoppingCart>
                 </div>
-                <div className=" text-xs hidden sm:flex">
+                <div className=" text-xs hidden lg:flex">
                   <h3 className="text-white font-bold">
                     <small className="text-gray-300 ">You Cart</small> <br />{" "}
                     $0.00
@@ -184,7 +185,7 @@ const Navess = () => {
 
               <div className="hidden sm:flex items-center gap-2 ">
                 <FaRegUserCircle className="text-white text-3xl"></FaRegUserCircle>
-                <div className=" text-xs hidden sm:flex">
+                <div className=" text-xs hidden lg:flex">
                   <h3 className="text-white font-bold">
                     <small className="text-gray-300 ">Login</small> <br />{" "}
                     Account
@@ -195,7 +196,7 @@ const Navess = () => {
           </div>
 
           <div
-            className={`absolute top-0 right-0 overflow-hidden bg-slate-500 transition-all ${
+            className={`absolute top-0 right-0 overflow-hidden bg-slate-100 transition-all ${
               visible ? "w-full" : "w-0"
             } `}
           >
@@ -212,7 +213,8 @@ const Navess = () => {
           </div>
         </div>
         <hr className="w-full lg:hidden border-none h-[1.1px] bg-gray-500 " />
-        <div className="lg:hidden md:hidden mt-3  flex input input-bordered items-center ">
+
+        <div className="flex sm:hidden mt-3  input input-bordered items-center ">
           {SerchOPtion}
         </div>
       </div>
@@ -224,26 +226,60 @@ const Navess = () => {
         <div className="navbar search hidden sm:flex sm:px-28 bg-[#263c97] text-white">
           <div className="navbar-start ">
             <div className="flex items-center gap-2 ">
-              <MdOutlineMenu className="text-3xl text-white mr-2"></MdOutlineMenu>
-              <h1 className="text-2xl hidden lg:flex text-white uppercase prata-regular">
-                shop by departmen
-              </h1>
+              <div className="group relative">
+                <div className="flex items-center">
+                  <MdOutlineMenu className="text-xl text-white mr-2 cursor-pointer"></MdOutlineMenu>
+                  <h1 className="text-xl hidden lg:flex text-white uppercase prata-regular">
+                    Shop Categories
+                  </h1>
+                </div>
+                <div className="group-hover:block hidden absolute dropdown-menu  pt-5 z-10">
+                  <div className="flex flex-col border border-indigo-600 gap-2 w-44 py-3 text-xl px-5  bg-slate-200 text-gray-500 rounded">
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Smartphone
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Headphones
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Tablets
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Smart Watch
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Speakers
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Tech Gift
+                    </p>
+                    <p className="cursor-pointer hover:text-[#082cbd]">
+                      Camcorders
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="navbar-center ">
-            <ul className="menu menu-horizontal  gap-5 text-2xl uppercase">
+            {/* <ul className="hidden sm:flex gap-5 text-3xl text-gray-900 "> */}
+            <ul className="menu menu-horizontal  gap-5 text-xl uppercase ">
               {navOption}
             </ul>
           </div>
           <div className="navbar-end hidden md:flex">
-            <div className="gap-2 flex items-center">
+            <div className="">
               <img className="w-10" src={image} alt="" />
-              <h3 className="text-white text-2xl hidden lg:flex">
-                Sale $20 Off Your First Order.
-              </h3>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* 4 Shop */}
+      <div>
+        <h2 className="text-3xl text-base-content bg-gray-100  text-center font-medium p-4 uppercase">
+          shop
+        </h2>
       </div>
     </div>
   );
