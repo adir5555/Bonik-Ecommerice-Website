@@ -25,7 +25,7 @@ function App() {
         <Route path="/menshirt" element={<Menshirt></Menshirt>}></Route>
         <Route path="/" element={<Page></Page>}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

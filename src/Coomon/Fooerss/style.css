@@ -8,7 +8,7 @@
   border-block-end: 2px solid var(--independence_30);
 }
 
-.footer-top::after {
+/* .footer-top::after {
   content: url(../images/delivery-boy.svg);
   position: absolute;
   bottom: -11px;
@@ -20,7 +20,30 @@
 @keyframes running-cycle  {
   0% { left: 0%; }
   100% { left: 100%; }
+} */
+
+
+
+
+
+
+
+
+
+.footer-top::after {
+  content: url(../images/delivery-boy.svg);
+  position: absolute;
+  bottom: -11px;
+  left: -160px;
+  width: 160px;
+  animation: running-cycle 25s linear infinite;
 }
+
+@keyframes running-cycle {
+  0% { left: -160px; }  /* Start outside the container */
+  100% { left: calc(100% + 160px); }  /* End completely outside the container */
+}
+
 
 
 

@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { BiMenuAltRight } from "react-icons/bi";
 import Sidebar from "../SidebarHooks/Sidebar";
@@ -9,6 +9,8 @@ import CardA from "../SidebarHooks/CardA";
 import CartB from "../SidebarHooks/CartB";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/ProviderAuth";
+import Check from "./Check";
+
 
 const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -21,6 +23,7 @@ const Shop = () => {
     menut,
     menud,
     query,
+    
   } = useContext(AuthContext);
 
   const [rowwss, setRowwss] = useState(false);
@@ -31,6 +34,7 @@ const Shop = () => {
   };
 
   // ------------ Button Filtering -----------
+
   const handleClick = (event) => {
     setSelectedCategory(event.target.value);
   };
@@ -135,7 +139,6 @@ const Shop = () => {
     );
   }
 
- 
   const result = filteredData(menu, selectedCategory, query);
   const resultA = filteredDataA(menud, selectedCategory, query);
   const resultB = filteredDataB(menut, selectedCategory, query);
@@ -187,13 +190,33 @@ const Shop = () => {
 
           <hr className="mb-3" />
 
-
           <div className="row-span-2 col-span-2 ...">
             <Products
               result={result}
               resultA={resultA}
               resultB={resultB}
             ></Products>
+
+            {query && (
+              <div className="">
+                {result.length > 0 ? (
+                  <ul>
+                    {result.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>erwyhhhhhhhhhh</p>
+                  
+
+                  
+                )}
+               
+              </div>
+            )}
+
+           
+
           </div>
         </div>
       </div>
@@ -214,7 +237,7 @@ const Shop = () => {
 
           <div className="flex flex-col gap-5 p-3">
             <hr />
-            {rowSpanOption}
+            {/* {rowSpanOption} */}
           </div>
         </div>
       </div>

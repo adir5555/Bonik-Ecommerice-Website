@@ -1,13 +1,13 @@
 
 .search.active {
-  height: 8vh;
+  /* height: 10vh; */
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
-  background-color: #071d74;
+  background-color: #fff;
   box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 @media (max-width: 768px) {
@@ -16,3 +16,23 @@
   }
 
 }
+
+/*  */
+
+.container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+
+/* Style for full display */
+.full-display {
+  position:  absolute; 
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+
+}
+
+
+

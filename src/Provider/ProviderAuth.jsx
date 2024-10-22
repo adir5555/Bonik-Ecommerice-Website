@@ -3,16 +3,17 @@ import UseCard from "../Hooks/UseCard";
 import UseCarda from "../Hooks/UseCarda";
 import UseCardshirt from "../Hooks/UseCardshirt";
 
-export const AuthContext =createContext(null)
-const ProviderAuth = ({children}) => {
-
+export const AuthContext = createContext(null);
+const ProviderAuth = ({ children }) => {
   const [menut] = UseCard();
   const [menud] = UseCarda();
   const [menu] = UseCardshirt();
   const [query, setQuery] = useState("");
 
+ 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
+    
   };
 
   const filteredItems = menut.filter(
@@ -23,9 +24,11 @@ const ProviderAuth = ({children}) => {
   );
   const filteredItemsss = menu.filter(
     (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+
   );
 
-  const authInfo ={
+
+  const authInfo = {
     filteredItems,
     filteredItemss,
     filteredItemsss,
@@ -33,11 +36,13 @@ const ProviderAuth = ({children}) => {
     menu,
     menut,
     menud,
-    query
-  }
+    query,
+   
+  };
   return (
     <div className=" ">
-     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+      
+      <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
     </div>
   );
 };

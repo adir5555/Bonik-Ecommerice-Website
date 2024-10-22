@@ -14,7 +14,7 @@ const UseCardshirt = () => {
         setMenu(data);
         setLoading(false);
       });
-  }, []);
+  }, [setMenu]);
 
   return [menu, loading];
 };
